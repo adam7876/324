@@ -266,17 +266,13 @@
                     const productCode = match[1].toUpperCase();
                     if (productMap[productCode]) {
                         addMessage(`正在跳轉到 ${productCode} 商品頁面...`);
-                        setTimeout(() => {
-                            window.open(productMap[productCode], '_blank');
-                        }, 1000);
+                        window.open(productMap[productCode], '_blank');
                     } else {
                         addMessage('查無此商品編號，請確認後再輸入。');
                     }
                 } else if (message === '+1') {
                     addMessage('正在跳轉到商品頁面...');
-                    setTimeout(() => {
-                        window.open(targetUrl, '_blank');
-                    }, 1000);
+                    window.open(targetUrl, '_blank');
                 } else {
                     addMessage('請輸入「商品編號 +1」或「+1」');
                 }
